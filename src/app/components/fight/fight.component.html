@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div *ngIf="proData1" class="col-sm-5 col-sm-offset-1">
+      <img class="pro-img" src="{{proData1.avatar_url}}" alt="">
+      <h4>Name: {{ proData1.name }}</h4>
+      <h4>Scores</h4>
+      <h4 class="ml-1">Repos: {{ proData1.repoCount * 5 }}</h4>
+      <h4 class="ml-1">Followers: {{ proData1.followers * 3 }}</h4>
+      <h4 class="ml-1">Following: {{ proData1.following * -2 }}</h4>
+      <h4 class="ml-1">Stars: {{ proData1.stars }}</h4>
+      <h4 class="ml-1">Forks: {{ proData1.forkCount * 3 }}</h4>
+      <h4>Total</h4>
+      <h4 class="ml-1">{{ total1 }}</h4>
+      <h2 *ngIf="total1>total2" class="winner">Winner</h2>
+    </div>
+
+    <div *ngIf="proData2" class="col-sm-5 col-sm-offset-1">
+      <img class="pro-img" src="{{proData2.avatar_url}}" alt="">
+      <h4>Name: {{ proData2.name }}</h4>
+      <h4>Scores</h4>
+      <h4 class="ml-1">Repos: {{ proData2.repoCount * 5  }}</h4>
+      <h4 class="ml-1">Followers: {{ proData2.followers * 3  }}</h4>
+      <h4 class="ml-1">Following: {{ proData2.following * -2 }}</h4>
+      <h4 class="ml-1">Stars: {{ proData2.stars }}</h4>
+      <h4 class="ml-1">Forks: {{ proData2.forkCount * 3  }}</h4>
+      <h4>Total</h4>
+      <h4 class="ml-1">{{ total2 }}</h4>
+      <h2 *ngIf="total2>total1" class="winner">Winner</h2>
+    </div>
+  </div>
+
+  <h2 *ngIf="total1==total2 && proData1 && proData2" class="winner text-center">Draw</h2>
+</div>

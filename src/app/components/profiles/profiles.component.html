@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div *ngIf="proData1" class="col-sm-5 col-sm-offset-1">
+      <img class="pro-img" src="{{proData1.avatar_url}}" alt="">
+      <h4>Name: {{ proData1.name }}</h4>
+      <h4>Repos: {{ proData1.repoCount }}</h4>
+      <h4>Followers: {{ proData1.followers }}</h4>
+      <h4>Following: {{ proData1.following }}</h4>
+      <h4>Stars: {{ proData1.stars }}</h4>
+      <h4>Forks: {{ proData1.forkCount }}</h4>
+    </div>
+
+    <div *ngIf="proData2" class="col-sm-5 col-sm-offset-1">
+      <img class="pro-img" src="{{proData2.avatar_url}}" alt="">
+      <h4>Name: {{ proData2.name }}</h4>
+      <h4>Repos: {{ proData2.repoCount }}</h4>
+      <h4>Followers: {{ proData2.followers }}</h4>
+      <h4>Following: {{ proData2.following }}</h4>
+      <h4>Stars: {{ proData2.stars }}</h4>
+      <h4>Forks: {{ proData2.forkCount }}</h4>
+    </div>
+  </div>
+</div>
